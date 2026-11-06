@@ -87,111 +87,105 @@
 
         <form id="contactForm" autocomplete="off">
 
-          <h3 class="title">Kontakta oss</h3>
+  <h3 class="title">Kontakta oss</h3>
 
-          <div class="input-container">
-            <input
-              type="text"
-              name="name"
-              class="input"
-              required />
-            <label>Namn *</label>
-            <span>Namn *</span>
-          </div>
+  <div class="input-container">
+    <input
+      type="text"
+      name="name"
+      class="input"
+      placeholder="Namn *"
+      required>
+  </div>
 
-          <div class="input-container">
-            <input
-              type="email"
-              name="email"
-              class="input"
-              required />
-            <label>E-post *</label>
-            <span>E-post *</span>
-          </div>
+  <div class="input-container">
+    <input
+      type="email"
+      name="email"
+      class="input"
+      placeholder="E-post *"
+      required>
+  </div>
 
-          <div class="checkbox-container">
-            <label class="checkbox-label">
-              <input
-                type="checkbox"
-                id="contactByPhone">
-              Jag önskar bli kontaktad per telefon
-            </label>
-          </div>
+  <div class="checkbox-container">
+    <label class="checkbox-label">
+      <input
+        type="checkbox"
+        id="contactByPhone">
 
-          <div
-            class="input-container"
-            id="phoneContainer"
-            style="display:none;">
+      Jag önskar bli kontaktad per telefon
+    </label>
+  </div>
 
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              class="input" />
+  <div
+    class="input-container"
+    id="phoneContainer"
+    style="display:none;">
 
-            <label>Mobilnummer *</label>
-            <span>Mobilnummer *</span>
+    <input
+      type="tel"
+      name="phone"
+      id="phone"
+      class="input"
+      placeholder="Mobilnummer *">
+  </div>
 
-          </div>
+  <div class="input-container">
 
-          <div class="input-container">
+    <select
+      name="subject"
+      class="input"
+      required>
 
-            <select
-              name="subject"
-              class="input"
-              required>
+      <option value="" selected disabled>Välj ärende *</option>
+      <option value="biljetter">Biljetter</option>
+      <option value="medlemskap">Medlemskap</option>
+      <option value="sponsring">Partnerskap / Sponsring</option>
+      <option value="hockeyskola">Hockeyskola</option>
+      <option value="press">Press</option>
+      <option value="ovrigt">Övrigt</option>
 
-              <option value="">Välj ärende *</option>
-              <option value="biljetter">Biljetter</option>
-              <option value="medlemskap">Medlemskap</option>
-              <option value="sponsring">Partnerskap / Sponsring</option>
-              <option value="hockeyskola">Hockeyskola</option>
-              <option value="press">Press</option>
-              <option value="ovrigt">Övrigt</option>
+    </select>
 
-            </select>
+  </div>
 
-          </div>
+  <div class="input-container textarea">
 
-          <div class="input-container textarea">
+    <textarea
+      name="message"
+      class="input"
+      placeholder="Meddelande *"
+      required></textarea>
 
-            <textarea
-              name="message"
-              class="input"
-              required></textarea>
+  </div>
 
-            <label>Meddelande *</label>
-            <span>Meddelande *</span>
+  <div class="checkbox-container gdpr">
 
-          </div>
+    <label class="checkbox-label">
 
-          <div class="checkbox-container gdpr">
+      <input
+        type="checkbox"
+        name="gdpr"
+        required>
 
-            <label class="checkbox-label">
+      Jag godkänner att Karlskrona Hockey behandlar mina
+      personuppgifter för att kunna besvara mitt ärende. *
 
-              <input
-                type="checkbox"
-                name="gdpr"
-                required>
+    </label>
 
-              Jag godkänner att Karlskrona Hockey behandlar mina
-              personuppgifter för att kunna besvara mitt ärende. *
+  </div>
 
-            </label>
+  <div
+    class="g-recaptcha"
+    data-sitekey="DIN_SITE_KEY">
+  </div>
 
-          </div>
+  <input
+    type="submit"
+    value="Skicka"
+    class="btn">
 
-          <div
-            class="g-recaptcha"
-            data-sitekey="DIN_SITE_KEY">
-          </div>
-
-          <input
-            type="submit"
-            value="Skicka"
-            class="btn" />
-
-        </form>
+</form>
 
       </div>
 
