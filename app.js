@@ -16,3 +16,18 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+const contactByPhone = document.getElementById("contactByPhone");
+const phoneContainer = document.getElementById("phoneContainer");
+const phoneInput = document.getElementById("phone");
+
+contactByPhone.addEventListener("change", function () {
+  if (this.checked) {
+    phoneContainer.style.display = "block";
+    phoneInput.required = true;
+  } else {
+    phoneContainer.style.display = "none";
+    phoneInput.required = false;
+    phoneInput.value = "";
+  }
+});
