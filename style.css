@@ -158,7 +158,7 @@ body {
 /* TEXTAREA */
 
 textarea.input {
-  min-height: 120px;
+  min-height: 100px;
   resize: vertical;
   border-radius: 25px;
 }
