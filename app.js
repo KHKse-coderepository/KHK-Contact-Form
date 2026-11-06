@@ -17,17 +17,28 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-const contactByPhone = document.getElementById("contactByPhone");
-const phoneContainer = document.getElementById("phoneContainer");
-const phoneInput = document.getElementById("phone");
+const contactByPhone =
+      document.getElementById("contactByPhone");
 
-contactByPhone.addEventListener("change", function () {
-  if (this.checked) {
-    phoneContainer.style.display = "block";
-    phoneInput.required = true;
-  } else {
-    phoneContainer.style.display = "none";
-    phoneInput.required = false;
-    phoneInput.value = "";
-  }
-});
+    const phoneContainer =
+      document.getElementById("phoneContainer");
+
+    const phoneField =
+      document.getElementById("phone");
+
+    contactByPhone.addEventListener("change", () => {
+
+      if (contactByPhone.checked) {
+
+        phoneContainer.style.display = "block";
+        phoneField.required = true;
+
+      } else {
+
+        phoneContainer.style.display = "none";
+        phoneField.required = false;
+        phoneField.value = "";
+
+      }
+
+    });
