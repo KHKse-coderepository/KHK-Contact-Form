@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,15 +19,10 @@
     async
     defer>
   </script>
-
 </head>
 
 <body>
   <div class="container">
-
-    <span class="big-circle"></span>
-
-    <img src="img/shape.png" class="square" alt="" />
 
     <div class="form">
 
@@ -44,13 +40,18 @@
           <h3 class="title">Besöksadress</h3>
 
           <div class="information">
-            <img src="img/location.png" class="icon" alt="" />
+            <img src="img/location.png" class="icon" alt="Adress" />
             <p>Arenavägen 19, 371 55 KARLSKRONA</p>
           </div>
 
           <div class="information">
-            <img src="img/email.png" class="icon" alt="" />
+            <img src="img/email.png" class="icon" alt="E-post" />
             <p>kansli@khk.se</p>
+          </div>
+
+          <div class="information">
+            <img src="img/phone.png" class="icon" alt="Telefon" />
+            <p>0455-61 91 00</p>
           </div>
 
         </div>
@@ -93,8 +94,7 @@
               type="text"
               name="name"
               class="input"
-              required
-            />
+              required />
             <label>Namn *</label>
             <span>Namn *</span>
           </div>
@@ -104,8 +104,7 @@
               type="email"
               name="email"
               class="input"
-              required
-            />
+              required />
             <label>E-post *</label>
             <span>E-post *</span>
           </div>
@@ -114,25 +113,25 @@
             <label class="checkbox-label">
               <input
                 type="checkbox"
-                id="contactByPhone"
-              >
-              Kontakta mig per telefon
+                id="contactByPhone">
+              Jag önskar bli kontaktad per telefon
             </label>
           </div>
 
           <div
             class="input-container"
             id="phoneContainer"
-            style="display:none;"
-          >
+            style="display:none;">
+
             <input
               type="tel"
               name="phone"
               id="phone"
-              class="input"
-            />
+              class="input" />
+
             <label>Mobilnummer *</label>
             <span>Mobilnummer *</span>
+
           </div>
 
           <div class="input-container">
@@ -140,8 +139,8 @@
             <select
               name="subject"
               class="input"
-              required
-            >
+              required>
+
               <option value="">Välj ärende *</option>
               <option value="biljetter">Biljetter</option>
               <option value="medlemskap">Medlemskap</option>
@@ -149,16 +148,17 @@
               <option value="hockeyskola">Hockeyskola</option>
               <option value="press">Press</option>
               <option value="ovrigt">Övrigt</option>
+
             </select>
 
           </div>
 
           <div class="input-container textarea">
+
             <textarea
               name="message"
               class="input"
-              required
-            ></textarea>
+              required></textarea>
 
             <label>Meddelande *</label>
             <span>Meddelande *</span>
@@ -172,8 +172,7 @@
               <input
                 type="checkbox"
                 name="gdpr"
-                required
-              >
+                required>
 
               Jag godkänner att Karlskrona Hockey behandlar mina
               personuppgifter för att kunna besvara mitt ärende. *
@@ -182,20 +181,15 @@
 
           </div>
 
-          <br>
-
           <div
             class="g-recaptcha"
             data-sitekey="DIN_SITE_KEY">
           </div>
 
-          <br>
-
           <input
             type="submit"
             value="Skicka"
-            class="btn"
-          />
+            class="btn" />
 
         </form>
 
@@ -205,5 +199,38 @@
 
   </div>
 
+  <script>
+
+    const contactByPhone =
+      document.getElementById("contactByPhone");
+
+    const phoneContainer =
+      document.getElementById("phoneContainer");
+
+    const phoneField =
+      document.getElementById("phone");
+
+    contactByPhone.addEventListener("change", () => {
+
+      if (contactByPhone.checked) {
+
+        phoneContainer.style.display = "block";
+        phoneField.required = true;
+
+      } else {
+
+        phoneContainer.style.display = "none";
+        phoneField.required = false;
+        phoneField.value = "";
+
+      }
+
+    });
+
+  </script>
+
+  <script src="app.js"></script>
+
 </body>
+
 </html>
