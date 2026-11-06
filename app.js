@@ -42,3 +42,5 @@ const contactByPhone =
       }
 
     });
+
+<script>
