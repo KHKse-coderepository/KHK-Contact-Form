@@ -18,29 +18,29 @@ inputs.forEach((input) => {
 });
 
 const contactByPhone =
-      document.getElementById("contactByPhone");
+  document.getElementById("contactByPhone");
 
-    const phoneContainer =
-      document.getElementById("phoneContainer");
+const phoneContainer =
+  document.getElementById("phoneContainer");
 
-    const phoneField =
-      document.getElementById("phone");
+const phoneField =
+  document.getElementById("phone");
 
-    contactByPhone.addEventListener("change", () => {
+contactByPhone.addEventListener("change", () => {
 
-      if (contactByPhone.checked) {
+  if (contactByPhone.checked) {
 
-        phoneContainer.style.display = "block";
-        phoneField.required = true;
+    phoneContainer.style.display = "block";
+    phoneField.required = true;
 
-      } else {
+  } else {
 
-        phoneContainer.style.display = "none";
-        phoneField.required = false;
-        phoneField.value = "";
+    phoneContainer.style.display = "none";
+    phoneField.required = false;
+    phoneField.value = "";
 
-      }
+  }
 
-    });
+});
 
 <script>
