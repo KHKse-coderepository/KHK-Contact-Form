@@ -32,7 +32,6 @@ body {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -91,23 +90,17 @@ body {
 .social-icons a {
   width: 40px;
   height: 40px;
-
   background: linear-gradient(
     45deg,
     #E84E0F,
     #C6400B
   );
-
   color: #fff;
-
   border-radius: 6px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   text-decoration: none;
-
   transition: 0.3s;
 }
 
@@ -132,21 +125,18 @@ body {
 }
 
 .input-container {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .input {
   width: 100%;
-
   background: transparent;
   color: #fff;
-
   border: 2px solid #fff;
   border-radius: 30px;
-
-  padding: 0.9rem 1.2rem;
-
+  padding: 0.85rem 1.2rem;
   outline: none;
+  font-size: 1rem;
 }
 
 .input::placeholder {
@@ -155,10 +145,14 @@ body {
   font-weight: 500;
 }
 
+.input:focus {
+  background: rgba(255,255,255,0.05);
+}
+
 /* TEXTAREA */
 
 textarea.input {
-  min-height: 100px;
+  min-height: 90px;
   resize: vertical;
   border-radius: 25px;
 }
@@ -169,20 +163,11 @@ select.input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
   cursor: pointer;
 
   background-image:
-    linear-gradient(
-      45deg,
-      transparent 50%,
-      #ffffff 50%
-    ),
-    linear-gradient(
-      135deg,
-      #ffffff 50%,
-      transparent 50%
-    );
+    linear-gradient(45deg, transparent 50%, #ffffff 50%),
+    linear-gradient(135deg, #ffffff 50%, transparent 50%);
 
   background-position:
     calc(100% - 24px) calc(50% - 3px),
@@ -211,25 +196,21 @@ select.input:invalid {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-
   color: #fff;
-  line-height: 1.6;
-
+  line-height: 1.5;
   cursor: pointer;
 }
 
 .checkbox-label input[type="checkbox"] {
-  margin-top: 4px;
-  width: 18px;
-  height: 18px;
-
-  accent-color: #fff;
-
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  accent-color: #ffffff;
   flex-shrink: 0;
 }
 
 .gdpr {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
 
 /* TELEFONFÄLT */
@@ -254,31 +235,27 @@ select.input:invalid {
 
 /* CAPTCHA */
 
+.h-captcha,
 .g-recaptcha {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1.5rem 0;
 }
 
 /* KNAPP */
 
 .btn {
   width: 100%;
-
   padding: 1rem;
-
   border: 2px solid #fff;
   border-radius: 30px;
-
   background: #fff;
   color: #E84E0F;
-
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-
   text-transform: uppercase;
-
+  letter-spacing: 1px;
   cursor: pointer;
-
   transition: 0.3s;
 }
 
@@ -287,7 +264,7 @@ select.input:invalid {
   color: #E84E0F;
 }
 
-/* MOBIL */
+/* TABLET */
 
 @media (max-width: 850px) {
 
@@ -297,26 +274,60 @@ select.input:invalid {
 
 }
 
+/* MOBIL */
+
 @media (max-width: 480px) {
 
   .container {
-    padding: 1rem;
+    padding: 0;
   }
 
-  .contact-info,
+  .form {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .contact-info {
+    padding: 1.25rem;
+  }
+
   .contact-form form {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .contact-info .title,
   .contact-form .title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
-  .text,
-  .information,
+  .input {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  textarea.input {
+    min-height: 90px;
+  }
+
   .checkbox-label {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .checkbox-label input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+  }
+
+  .information,
+  .text {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    padding: 0.95rem;
   }
 
 }
