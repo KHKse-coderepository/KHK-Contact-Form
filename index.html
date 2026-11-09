@@ -51,8 +51,31 @@
       <div class="contact-form">
         <span class="circle one"></span>
         <span class="circle two"></span>
-        <form id="contactForm" autocomplete="off" action="" method=POST">
-        <h3 class="title">Kontakta oss</h3>
+        <form
+  id="contactForm"
+  autocomplete="off"
+  action="https://api.web3forms.com/submit"
+  method="POST">
+
+  <!-- Web3Forms -->
+
+  <input
+    type="hidden"
+    name="access_key"
+    value="41b47cd4-0230-425c-832a-342c51674dc2">
+
+  <input
+    type="hidden"
+    name="subject"
+    value="Nytt kontaktärende från khk.se">
+
+  <input
+    type="hidden"
+    name="from_name"
+    value="Karlskrona Hockey Kontaktformulär">
+
+  <h3 class="title">Kontakta oss</h3>
+
   <div class="input-container">
     <input
       type="text"
@@ -76,7 +99,6 @@
       <input
         type="checkbox"
         id="contactByPhone">
-
       Jag önskar bli kontaktad per telefon
     </label>
   </div>
@@ -85,7 +107,6 @@
     class="input-container"
     id="phoneContainer"
     style="display:none;">
-
     <input
       type="tel"
       name="phone"
@@ -95,18 +116,31 @@
   </div>
 
   <div class="input-container">
-
     <select
-      name="subject"
+      name="department"
       class="input"
       required>
-      <option value="" selected disabled>Välj ärende *</option>
-      <option value="biljetter">Biljetter</option>
-      <option value="medlemskap">Medlemskap</option>
-      <option value="sponsring">Partnerskap / Sponsring</option>
-      <option value="hockeyskola">Hockeyskola</option>
-      <option value="press">Press</option>
-      <option value="ovrigt">Övrigt</option>
+      <option value="" selected disabled>
+        Välj ärende *
+      </option>
+      <option value="Biljetter">
+        Biljetter
+      </option>
+      <option value="Medlemskap">
+        Medlemskap
+      </option>
+      <option value="Partnerskap / Sponsring">
+        Partnerskap / Sponsring
+      </option>
+      <option value="Hockeyskola">
+        Hockeyskola
+      </option>
+      <option value="Press">
+        Press
+      </option>
+      <option value="Övrigt">
+        Övrigt
+      </option>
     </select>
   </div>
 
@@ -128,7 +162,10 @@
     </label>
   </div>
 
-  <div class="g-recaptcha" data-sitekey="6LfDYRMuAAAAAAkMkWfBlNue7sLq8ySoQYlyzTyE" data-action="LOGIN"></div>
+  <div
+    class="g-recaptcha"
+    data-sitekey="6LfDYRMuAAAAAAkMkWfBlNue7sLq8ySoQYlyzTyE">
+  </div>
 
   <input
     type="submit"
