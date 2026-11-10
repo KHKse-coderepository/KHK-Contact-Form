@@ -104,6 +104,11 @@ body {
   transition: 0.3s;
 }
 
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
 .social-icons a:hover {
   transform: scale(1.05);
 }
